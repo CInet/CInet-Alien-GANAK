@@ -1,0 +1,43 @@
+use alienfile;
+use autodie;
+
+use Path::Tiny;
+use IPC::Run3;
+
+configure {
+    requires 'Path::Tiny';
+    requires 'IPC::Run3';
+};
+
+share {
+    start_url 'ganak/';
+    plugin 'Fetch::LocalDir';
+    plugin 'Extract::Directory';
+
+    plugin 'Build::CMake';
+    build [
+        [
+            '%{cmake}',
+            '-DCMAKE_INSTALL_PREFIX:PATH=%{.install.prefix}',
+            '-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=true',
+	    '-DCMAKE_MAKE_PROGRAM:PATH=%{make}',
+            '-DCMAKE_BUILD_TYPE=Release',
+            '-DSTATICCOMPILE=ON',
+            '%{.install.extract}'
+        ],
+        '%{make}',
+        '%{make} install',
+    ];
+};
+
+gather sub {
+    my $build = shift;
+    my $exename = $build->runtime_prop->{exename} =
+        'ganak';
+
+    # XXX: Somehow the DESTDIR prefix is needed.
+    my $exe = path($ENV{DESTDIR}, $build->install_prop->{prefix}, 'bin', $exename);
+    run3 [$exe, '-V'], \undef, \my $stdout;
+    $stdout =~ /GANAK version ([0-9.a-z]+)/;
+    $build->runtime_prop->{version} = $1;
+};
