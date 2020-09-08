@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/taboege/ganak
+	branch = master
+	commit = 4e2c86921e207189b0084bb4b10f6306911d6ca2
+	parent = 88689f3c144a4ee39153aef8589b09abaa4a472d
+	method = merge
+	cmdver = 0.4.0
