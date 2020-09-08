@@ -4,9 +4,9 @@
 ; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
 ;
 [subrepo]
-	remote = https://github.com/taboege/ganak
+	remote = https://github.com/faheel/BigInt
 	branch = master
-	commit = ceecb57e7b38fa0fcb3af92ca29fcbaf5075bb7d
-	parent = b7309ff95e712837605bd02232f1a2687d905481
+	commit = 59f7cad13c4aa1ef6825b6853cb4e50b82c27f64
+	parent = 7f8445696f0b24b2ec64c85bc56a6e7c3c277310
 	method = merge
 	cmdver = 0.4.0
