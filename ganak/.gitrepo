@@ -6,7 +6,7 @@
 [subrepo]
 	remote = https://github.com/taboege/ganak
 	branch = master
-	commit = 4e2c86921e207189b0084bb4b10f6306911d6ca2
-	parent = 88689f3c144a4ee39153aef8589b09abaa4a472d
+	commit = e443e47b1abe5d02ec91ceb8f2badea1c5075f2e
+	parent = b69a822f3983da928ee1ab26edd683d3d3731b49
 	method = merge
 	cmdver = 0.4.0
