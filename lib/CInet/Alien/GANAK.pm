@@ -24,7 +24,7 @@ use base qw(Alien::Base);
     # In any case, parse the answer from $out.
     # CAUTION: it may overflow Perl's native integer,
     # consider C<use bignum>.
-    my ($count,) = $out =~ /^s mc (\d+)/;
+    my ($count,) = $out =~ /^s mc (\d+)/m;
 
 =head2 VERSION
 
