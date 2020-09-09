@@ -112,6 +112,20 @@ This software is copyright (C) 2020 by Tobias Boege.
 This is free software; you can redistribute it and/or
 modify it under the terms of the Artistic License 2.0.
 
+=head2 Bundled software
+
+The C<GANAK> solver is Copyright (C) 2018 by Shubham Sharma,
+Subhajit Roy, Mate Soos and Kuldeep S. Meel who released it
+under the MIT license.
+
+Parts of C<GANAK> are based on C<sharpSAT> which is
+Copyright (C) 2012 by Marc Thurley and released under
+the MIT license.
+
+Our modifications in particular replace usage of the GMP library
+by C<BigInt> which is Copyright (C) 2019 Syed Faheel Ahmad who
+released it under the MIT license.
+
 =cut
 
 ":wq"
