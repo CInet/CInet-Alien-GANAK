@@ -1,5 +1,10 @@
 Revision history for perl module CInet::Alien::GANAK
 
+v1.0.1 2020-09-11
+
+  - Bundle a new version of GANAK which does not write out.[p]mc files
+    into the CWD.
+
 v1.0.0 2020-09-08
 
   - Initial release
